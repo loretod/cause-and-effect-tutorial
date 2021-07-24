@@ -1,33 +1,45 @@
- 
+# Cause and Effect Game
 
+## Getting Started
 
-> Open this page at [https://loretod.github.io/cause-and-effect-tutorial/](https://loretod.github.io/cause-and-effect-tutorial/)
+Welcome! In this tutorial we will walk you through the basics of the Makecode Arcade platform and create a simple cause and effect game.
 
-## Use as Extension
+Click the next button to get started. 
+Click the immersive reader button to listen to the instructions.
+Click the lightbulb button to see the sample code.
 
-This repository can be added as an **extension** in MakeCode.
+## Step 1- Make a Background
+Let's create a solid color background! From the Scenes menu drag the ``||scene:set.BackgroundColor||`` into the 'on start' block.
 
-* open [https://arcade.makecode.com/](https://arcade.makecode.com/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/loretod/cause-and-effect-tutorial** and import
+Click in the grey oval and select your favorite color.
+```blocks
+scene.setBackgroundColor(0)
+```
 
-## Edit this project ![Build status badge](https://github.com/loretod/cause-and-effect-tutorial/workflows/MakeCode/badge.svg)
+## Step 2- Load a Sprite
+Sprites are the characters in your game. You can draw your own or use one of the pre made ones.
 
-To edit this repository in MakeCode.
+From the Sprites menu, drag the ``||variables:set mySprite to||`` block and drag it into the on start block.
 
-* open [https://arcade.makecode.com/](https://arcade.makecode.com/)
-* click on **Import** then click on **Import URL**
-* paste **https://github.com/loretod/cause-and-effect-tutorial** and click import
-
-## Blocks preview
-
-This image shows the blocks code from the last commit in master.
-This image may take a few minutes to refresh.
-
-![A rendered view of the blocks](https://github.com/loretod/cause-and-effect-tutorial/raw/master/.github/makecode/blocks.png)
-
-#### Metadata (used for search, rendering)
-
-* for PXT/arcade
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+```blocks
+scene.setBackgroundColor(4)
+//@highlight
+let mySprite = sprites.create(img`
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    `, SpriteKind.Player)
+```
